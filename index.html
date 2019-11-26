@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portofolio - Anes Čehić</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/icons/css/all.css">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/nav.css">
+</head>
+<body>
+  <!--
+    <header>
+
+    </header>,
+  -->
+  
+  <button class="toggle" onclick="hideMenuVertical()">Click me!</button>
+
+  <div id="homePage">
+    <nav id="nesto">
+      <a href="#" id="closeMenu">X</a>
+      <ul id="menulist">
+        <li><a href="#about" class="navLink">About me</a></li>
+        <li><a href="#projects" class="navLink">Projects</a></li>
+        <li><a href="#" class="navLink">Blog</a></li>
+        <li><a href="#contact" class="navLink">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+      <div id="details">
+        <h2>Hello, my name is:</h2>
+        <h1>Anes Čehić</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- About me -->
+  <div id="about">
+    <h1 id="naslov">About</h1>
+    <div class="mainAbout">
+      <div class="image">
+        <img src="/images/profil.jpg" alt="slika">
+      </div>
+      <div id="aboutdata">
+        <table>
+          <tr>
+            <td>Name: </td>
+            <td>Anes Čehić</td>
+          </tr>
+          <tr>
+            <td>Date of birth: </td>
+            <td>3 Aug 1994</td>
+          </tr>
+          <tr>
+            <td>City: </td>
+            <td>Sarajevo, BiH</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <h2 id="desc">
+      Full-stack developer from Sarajevo.
+      My primary position is Front-end dev and my weapon of choice is React.
+    </h2>
+  </div>
+
+  <div id="projects">
+
+  </div>
+
+  <!-- Contact me -->
+  <div id="contact">
+    <h2 id="contactForm">Contact Form</h2>
+    <p>If you have questions or want to work,<br>please contact me.</p>
+    <form action="#contact">
+      <input type="text" name="fullname" placeholder="Full name">
+      <input type="email" name="email" placeholder="Email">
+      <textarea name="comment" placeholder="Message..."></textarea>
+      <input type="submit" value="Send message">
+    </form>
+  </div>
+
+  <!-- Footer with links -->
+  <div class="footer">
+    <h1>Follow me on:</h1>
+    <footer>
+      <div><a href="#" id="facebook"><i class="fab fa-facebook-square"></i></a></div>
+      <div><a href="#"><i class="fab fa-linkedin"></i></a></div>
+      <div><a href="#"><i class="fab fa-twitter-square"></i></a></div>
+      <div><a href="#"><i class="fab fa-instagram"></i></a></div>
+    </footer>
+    <table>
+      <tr>
+        <td>Email:</td>
+        <td><a href="#">anes.cehic@gmail.com</a></td>
+      </tr>
+      <tr>
+        <td>Tel: </td>
+        <td>062280639</td>
+      </tr>
+    </table>
+    <br>
+    <h2>Anes Čehić</h2>
+  </div>
+
+  <script>
+
+    var hidden = false;
+
+    function hideMenu() {
+      var nav = document.getElementById("nesto");
+      
+      if(hidden) {
+        /*nav.style.marginRight = "100%;"
+        nav.style.width = "100%";
+        hidden = false;
+        menulist.style.visibility = "visible";*/
+
+        nav.style.marginLeft = "0px";
+        nav.style.transitionDuration = "0.5s";
+        hidden = false;
+
+        return;
+      } else {
+      
+        /*nav.style.transitionDuration = "0.5s";
+        nav.style.width = "0px";
+        menulist.style.visibility = "hidden";*/
+
+        nav.style.marginLeft = "-100vw";
+        nav.style.transitionDuration = "0.5s";
+        hidden = true;
+      }
+    }
+
+    function hideMenuVertical() {
+      var nav = document.getElementById("nesto");
+      
+      nav.style.transitionDuration = "0.5s";
+
+      if(!hidden) {
+        nav.style.marginLeft = "-100%";
+        hidden = true;
+      } else {
+        nav.style.marginLeft = "0%";
+        hidden = false;
+      }
+
+    }
+
+    var navLink = document.querySelectorAll(".navLink");
+    navLink.forEach(link => {
+      link.addEventListener('click', () => {
+        hideMenuVertical();
+      })
+    });
+
+    var closeMenuLink = document.getElementById("closeMenu");
+    closeMenuLink.addEventListener('click', () => {
+      hideMenuVertical();
+    });
+
+  </script>
+</body>
+</html>
