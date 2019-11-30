@@ -13,7 +13,7 @@ body {
 #homePage {
   height: 100vh;
   width: 100%;
-  background-image: url("/images/pozadina4.jpg");
+  background-image: url(../images/pozadina4.jpg);
   background-size: cover;
 }
 
@@ -156,6 +156,7 @@ img[alt="slika"] {
 
 #contact > form > * {
   width: 300px;
+  border-radius: 3px;
 }
 
 #contact form input, textarea {
@@ -163,8 +164,10 @@ img[alt="slika"] {
   width: 320px;
   margin-bottom: 10px;
   border: 1px solid black;
+  padding: 2px 0;
   padding-left: 10px;
   padding-right: 10px;
+  border: 1px solid black;
 }
 
 #contact form textarea {
@@ -173,6 +176,65 @@ img[alt="slika"] {
   width: 320px;
   max-width: 320px;
   padding: 10px;
+}
+
+.submitButton {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 123, 255);
+  font-weight: 800;
+  width: 50px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 15px;
+}
+
+/* Projects */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, rgb(129, 127, 127), rgb(131, 129, 129), rgb(226, 222, 222));
+}
+
+#projects > h1 {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+#projects > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.projekat h1 {
+  padding-top: 20px;
+}
+
+.projekat h1, .projekat h3, .projekat h4 {
+  margin: 10px;
+}
+
+.projekat p {
+  padding: 10px;
+}
+
+.projekat {
+  width: 48%;
+  min-height: 45vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.rule {
+  width: 90%;
 }
 
 /* CSS for mobile version */
@@ -220,5 +282,27 @@ img[alt="slika"] {
 
   #contact {
     padding-bottom: 70px;
+  }
+
+  #projects > div {
+    flex-direction: column;
+  }
+
+  #projects > h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  #projects > div {
+    min-height: 100vh;
+  }
+
+  .projekat {
+    width: 90%;
+    margin: 20px;
+  }
+
+  .projekat:last-child {
+    margin-bottom: 50px;
   }
 }
