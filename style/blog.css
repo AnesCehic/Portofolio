@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Calistoga', sans-serif;
+}
+
+body {
+  margin: 0%;
+  padding: 0;
+}
+
+#homePage > div {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images//perfectcode.jpg);
+  background-size: cover;
+}
+
+#homePage {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/pozadina4.jpg);
+  background-size: cover;
+}
+
+#homePage > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+#homePage #details {
+  border: 2px solid lightgrey;
+  background-image: linear-gradient(to bottom right, rgba(10, 56, 87, 0.85), rgba(100, 154, 201, 0.85));
+  border-radius: 5px;
+  padding: 50px 100px;
+  color: rgb(200, 200, 200);
+  margin-right: 10%;
+}
+
+
+#homePage h2, #homePage h1 {
+  margin: 0;
+  text-align: center;
+  opacity: 1;
+}
+
+#homePage h2 {
+  color: rgb(2, 37, 82);
+}
+
+#homePage h1 {
+  margin-top: 10px;
+  color: #c0c0c0;
+}
+
+.toggle {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 42px;
+  width: 42px;
+  background-color: green;
+  border: none;
+  outline: none;
+  opacity: 0.8;
+}
