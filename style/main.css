@@ -315,6 +315,21 @@ img[alt="slika"] {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .projekatLinkovi {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projekatLinkovi > a {
+    margin-right: 0;
+  }
+
+  .projekatLinkovi > a:first-child {
+    margin-bottom: 15px;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   
   img[alt="slika"] {
