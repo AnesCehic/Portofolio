@@ -86,19 +86,6 @@ body {
   margin-bottom: 20px;
 }
 
-.toggle {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 42px;
-  width: 42px;
-  background-color: green;
-  border: none;
-  outline: none;
-  opacity: 0.8;
-}
-
 img[alt="slika"] {
   width: 250px;
   border-radius: 50%;
@@ -248,8 +235,9 @@ img[alt="slika"] {
   width: 90%;
 }
 
-
-
+span {
+  font-weight: 900;
+}
 
 /* CSS for mobile version */
 

@@ -46,6 +46,20 @@ nav a:hover {
   display: none;
 }
 
+.toggle {
+  z-index: 2;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 42px;
+  width: 42px;
+  background-color: rgb(169, 188, 217);
+  border: none;
+  outline: none;
+  display: none;
+  border-radius: 3px;
+}
+
 @media only screen and (max-width: 950px) {
 
   nav {
@@ -85,5 +99,9 @@ nav a:hover {
   .active {
     margin-left: -100%;
     transition-duration: 0.5s;
+  }
+
+  .toggle {
+    display: inline-block;
   }
 }
