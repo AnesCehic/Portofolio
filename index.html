@@ -27,7 +27,7 @@
   <button class="toggle" onclick="hideMenuVertical()">Click me!</button>
 
   <div id="homePage">
-    <nav id="nesto">
+    <nav id="nesto" class="active">
       <a href="#" id="closeMenu">X</a>
       <ul id="menulist">
         <li><a href="#homePage" class="navLinkCustom">Home</a></li>
@@ -137,11 +137,11 @@
   <div class="footer">
     <h1>Follow me on:</h1>
     <footer>
-      <div><a href="#" id="facebook"><i class="fab fa-facebook-square"></i></a></div>
-      <div><a href="#"><i class="fab fa-linkedin"></i></a></div>
-      <div><a href="#"><i class="fab fa-twitter-square"></i></a></div>
-      <div><a href="#"><i class="fab fa-instagram"></i></a></div>
-      <div><a href="#"><i class="fab fa-github"></i></a></div>
+      <div><a href="https://www.facebook.com/" target="_blank" id="facebook"><i class="fab fa-facebook-square"></i></a></div>
+      <div><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+      <div><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
+      <div><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+      <div><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></div>
     </footer>
     <table>
       <tr>
@@ -157,63 +157,6 @@
     <h2>Anes Čehić</h2>
   </div>
 
-  <script>
-
-    var hidden = false;
-
-    function hideMenu() {
-      var nav = document.getElementById("nesto");
-      
-      if(hidden) {
-        /*nav.style.marginRight = "100%;"
-        nav.style.width = "100%";
-        hidden = false;
-        menulist.style.visibility = "visible";*/
-
-        nav.style.marginLeft = "0px";
-        nav.style.transitionDuration = "0.5s";
-        hidden = false;
-
-        return;
-      } else {
-      
-        /*nav.style.transitionDuration = "0.5s";
-        nav.style.width = "0px";
-        menulist.style.visibility = "hidden";*/
-
-        nav.style.marginLeft = "-100vw";
-        nav.style.transitionDuration = "0.5s";
-        hidden = true;
-      }
-    }
-
-    function hideMenuVertical() {
-      var nav = document.getElementById("nesto");
-      
-      nav.style.transitionDuration = "0.5s";
-
-      if(!hidden) {
-        nav.style.marginLeft = "-100%";
-        hidden = true;
-      } else {
-        nav.style.marginLeft = "0%";
-        hidden = false;
-      }
-
-    }
-
-    var navLink = document.querySelectorAll(".navLink");
-    navLink.forEach(link => {
-      link.addEventListener('click', () => {
-        hideMenuVertical();
-      })
-    });
-
-    var closeMenuLink = document.getElementById("closeMenu");
-    closeMenuLink.addEventListener('click', () => {
-      hideMenuVertical();
-    });
-
-  </script>
+  <script src="js/hideVerticalMenu.js"></script>
 </body>
 </html>

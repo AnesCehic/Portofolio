@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+
+* {
+  font-family: 'Calistoga';
+}
+
+body
+
+button {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+img {
+  height: 500px;
+  max-width: 500px;
+}
+
+.galerija_carousel {
+  width: 500px;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 80px;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+
+.carousel-caption {
+  background-color: rgba(20, 20, 20, 0.9);
+  border-radius: 5px;
+}
+
+#my_pictures {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  display: flex;
+  flex-direction: row;
+}
+
+.red1 img, .red2 img {
+  max-width: 350px;
+  max-height: 350px;
+  padding: 20px;
+}
+
+.red2 img {
+  margin-bottom: 70px;
+}
+
+.slika {
+  max-width: 650px;
+  height: auto;
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .red {
+    flex-direction: column;
+  }
+
+  .slika {
+    max-width: 350px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .galerija_carousel {
+    width: calc(100vw - 55px);
+  }
+}

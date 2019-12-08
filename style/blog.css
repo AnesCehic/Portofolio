@@ -88,3 +88,24 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+#lista_features {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+#lista_features li {
+  width: 200px;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #komponenta {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

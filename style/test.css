@@ -7,34 +7,6 @@
   background-size: cover;
 }
 
-#gold .boja {
-  width: 50%;
-}
-
-#gold #left {
-  background-image: linear-gradient(to right, rgb(233, 197, 105), rgb(216, 167, 42), rgb(184, 134, 11));
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-#gold #right {
-  background-image: linear-gradient(to right, #282828, rgb(58, 57, 57), rgb(100, 100, 100));
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: darkgoldenrod;
-}
-
-#gold h1:first-child {
-  margin-right: 15px;
-}
-
-#gold h1:last-child {
-  margin-left: 15px;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -57,26 +29,4 @@
   #gold {
     flex-direction: column;
   }
-
-  #gold .boja {
-    width: 100%;
-  }
-
-  #left, #right {
-    width: 100%;
-    height: 50%;
-  }
-
-  #gold #left {
-    justify-content: center;
-    align-items: flex-end;
-    background-image: linear-gradient(to bottom, rgb(233, 197, 105), rgb(216, 167, 42), rgb(184, 134, 11));
-  }
-
-  #gold #right {
-    justify-content: center;
-    align-items: flex-start;
-    background-image: linear-gradient(to bottom, #282828, rgb(58, 57, 57), rgb(100, 100, 100));
-  }
-
 }
