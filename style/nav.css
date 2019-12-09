@@ -42,6 +42,14 @@ nav a:hover {
   color: white;
 }
 
+nav a:active {
+  color: black;
+}
+
+nav a:visited {
+  color: rgb(224, 219, 219);
+}
+
 #closeMenu {
   display: none;
 }
